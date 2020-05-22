@@ -2,12 +2,6 @@ from .base_settings import *
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
-
-
-SECRET_KEY = os.environ.get("SECRET_KEY", default='django_secret_key_placeholder')
-
-
 INSTALLED_APPS += [    
     'debug_toolbar',
 ]

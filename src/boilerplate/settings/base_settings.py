@@ -1,8 +1,12 @@
 # Common base template for production and development settings.py
 
 import os
+from decouple import config
 
- 
+
+SECRET_KEY = config('SECRET_KEY')
+ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', "*").split(' ')
+
 BASE_DIR =  os.path.dirname(
             os.path.dirname(
             os.path.dirname(
@@ -85,13 +89,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
-# EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", default='')
+# EMAIL_HOST_USER = config("EMAIL_HOST_USER", default='')
 # EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
-# EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", default='')
+# EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default='')
 
 
 # # Repcaptcha KEYS
 
-# RECAPTCHA_PUBLIC_KEY = os.environ.get("RECAPTCHA_PUBLIC_KEY", default='')
-# RECAPTCHA_PRIVATE_KEY = os.environ.get("RECAPTCHA_PRIVATE_KEY", default='')
+# RECAPTCHA_PUBLIC_KEY = config("RECAPTCHA_PUBLIC_KEY", default='')
+# RECAPTCHA_PRIVATE_KEY = config("RECAPTCHA_PRIVATE_KEY", default='')

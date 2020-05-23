@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'crispy_forms',  # https://django-crispy-forms.readthedocs.io/en/latest/
     'formtools',  # https://django-formtools.readthedocs.io/en/latest/
     # 'localflavour',  # https://django-localflavor.readthedocs.io/en/latest /
+    'django_extensions'  # https://django-extensions.readthedocs.io/en/latest/index.html
 ]
 
 MIDDLEWARE = [

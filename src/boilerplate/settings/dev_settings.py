@@ -1,5 +1,7 @@
 from .base_settings import *
 
+print("In dev settings")
+
 DEBUG = True
 
 INSTALLED_APPS += [    

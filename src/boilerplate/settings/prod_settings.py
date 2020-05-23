@@ -1,7 +1,6 @@
 from .base_settings import *
 
 DEBUG = False
-
 DATABASES = {
     "default": {
         "ENGINE": config("SQL_ENGINE", "django.db.backends.sqlite3"),
@@ -12,3 +11,5 @@ DATABASES = {
         "PORT": config("SQL_PORT", "5432"),
     }
 }
+
+print(DATABASES['default'])

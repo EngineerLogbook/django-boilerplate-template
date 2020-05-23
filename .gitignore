@@ -147,5 +147,8 @@ __pycache__/
 local_settings.py
 
 .env
+.vscode
+src/media/*
+!src/media/default.png
 db.sqlite3
 

@@ -2,11 +2,12 @@ from .base_settings import *
 
 DEBUG = True
 
-INSTALLED_APPS += [    
+INSTALLED_APPS += [
     'debug_toolbar',
+    'djecrety',
 ]
 
-MIDDLEWARE.insert(0,'debug_toolbar.middleware.DebugToolbarMiddleware')
+MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
 
 DATABASES = {
@@ -18,8 +19,6 @@ DATABASES = {
 
 
 # Debug Toolbar
-
-INSTALLED_APPS += ['djecrety']
 
 # Debug toolbar will only be shown on these IPs
 INTERNAL_IPS = [
@@ -46,6 +45,6 @@ DEBUG_TOOLBAR_PANELS = [
 
 # Add custom toolbar settings here
 DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS':False,
+    'INTERCEPT_REDIRECTS': False,
     'SHOW_COLLAPSED': False,
 }

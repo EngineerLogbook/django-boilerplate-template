@@ -7,9 +7,9 @@ from decouple import config
 SECRET_KEY = config('SECRET_KEY')
 ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', "*").split(' ')
 
-BASE_DIR =  os.path.dirname(
-            os.path.dirname(
-            os.path.dirname(
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.dirname(
             os.path.abspath(__file__))))
 
 INSTALLED_APPS = [
@@ -22,7 +22,11 @@ INSTALLED_APPS = [
     'core_management.apps.CoreManagementConfig',
     'user_management.apps.UserManagementConfig',
     'landingpage.apps.LandingpageConfig',
-    'crispy_forms',
+    'django.contrib.sites',
+    'django_comments',  # https://django-contrib-comments.readthedocs.io/en/latest/
+    'crispy_forms',  # https://django-crispy-forms.readthedocs.io/en/latest/
+    'formtools',  # https://django-formtools.readthedocs.io/en/latest/
+    'localflavour'  # https://django-localflavor.readthedocs.io/en/latest /
 ]
 
 MIDDLEWARE = [
@@ -57,10 +61,10 @@ WSGI_APPLICATION = 'boilerplate.wsgi.application'
 
 
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', },
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator', },
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', },
 ]
 
 LANGUAGE_CODE = 'en-us'
@@ -85,7 +89,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # For login pages
 # To be uncommented once these urls are made.
 
-LOGIN_REDIRECT_URL='profile'
+LOGIN_REDIRECT_URL = 'profile'
 
 # Email Support for Database
 

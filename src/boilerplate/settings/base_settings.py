@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core_management.apps.CoreManagementConfig',
+    'core_management',
     'user_management.apps.UserManagementConfig',
     'landingpage.apps.LandingpageConfig',
     'django.contrib.sites',

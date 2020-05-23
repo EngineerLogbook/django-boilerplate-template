@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django_comments',  # https://django-contrib-comments.readthedocs.io/en/latest/
     'crispy_forms',  # https://django-crispy-forms.readthedocs.io/en/latest/
     'formtools',  # https://django-formtools.readthedocs.io/en/latest/
-    'localflavour'  # https://django-localflavor.readthedocs.io/en/latest /
+    # 'localflavour',  # https://django-localflavor.readthedocs.io/en/latest /
 ]
 
 MIDDLEWARE = [

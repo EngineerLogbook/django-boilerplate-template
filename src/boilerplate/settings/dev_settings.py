@@ -5,6 +5,7 @@ DEBUG = True
 INSTALLED_APPS += [
     'debug_toolbar',
     'djecrety',
+    'django_extensions'
 ]
 
 MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')

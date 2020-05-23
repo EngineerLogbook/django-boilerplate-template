@@ -34,7 +34,7 @@ cp src/.env.debug src/.env
 
 
 # Generate a secure secret key using the uuid module
-sed "s/YOUR_SECRET_KEY/$(python -c 'import uuid; print(str(uuid.uuid4()));')/" src/.env -i
+sed "s/YOUR_SECRET_KEY/$( python -c 'import random; print "".join([random.choice("abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)") for i in range(50)])')/" src/.env -i
 
 
 # Set the environment variables in your terminal sesssion

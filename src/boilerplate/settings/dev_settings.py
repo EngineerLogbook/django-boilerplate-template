@@ -19,6 +19,8 @@ DATABASES = {
 
 # Debug Toolbar
 
+INSTALLED_APPS += ['djecrety']
+
 # Debug toolbar will only be shown on these IPs
 INTERNAL_IPS = [
     '127.0.0.1',

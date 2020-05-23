@@ -53,8 +53,13 @@ cd ./src
 # To ensure changes in models.py are reflected
 python manage.py makemigrations
 
+
 # Populate the database tables
 python manage.py migrate
+
+
+# Change the name of the project from boilerplate to something of your choice
+python manage.py renameproject <oldname> <newname>
 ```
 
 * Run the debug server

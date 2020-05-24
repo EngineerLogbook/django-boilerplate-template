@@ -152,3 +152,4 @@ src/media/*
 !src/media/default.png
 db.sqlite3
 
+docs/public/

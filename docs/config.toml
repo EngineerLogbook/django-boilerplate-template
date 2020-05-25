@@ -6,9 +6,9 @@ paginate = 5
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
-∂
+
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "red"
+  themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 5
@@ -49,7 +49,7 @@ paginate = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "Dj-BoilerPlate"
+      logoText = "Django BoilerPlate"
       logoHomeLink = "/"
 
     # [languages.en.menu]
